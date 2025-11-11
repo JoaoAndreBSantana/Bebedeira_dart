@@ -19,3 +19,8 @@ Ao entrar na tela de jogo, uma carta aleatória é exibida no centro, contendo:
 - **Goles:** A quantidade de goles associada à carta.
 
 Os jogadores podem sortear uma nova carta a qualquer momento usando o botão "Próxima Carta". O aplicativo também inclui um filtro simples que permite ao grupo escolher jogar apenas com categorias específicas, personalizando a experiência da rodada. O design utiliza cores vibrantes (rosa, roxo e laranja) para criar um clima de festa e descontração.
+
+## Imagens
+![Tela home](img/bebedeira_home.png)
+
+![Tela jogo](img/bebedeira_jogo.png)
