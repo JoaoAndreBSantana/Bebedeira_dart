@@ -3,12 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'jogo_tela.dart';
 
-/// Tela inicial que mostra nome, descrição, aviso e botão para começar.
-/// Layout atualizado: textos em retângulos, aviso maior e destaque visual.
 class HomeTela extends StatelessWidget {
   const HomeTela({super.key});
 
-  // Lê a seção "meta" do JSON. Ajuste o caminho se você mover o arquivo de lugar.
+  // Lê a seção  do json
   Future<Map<String, dynamic>> _loadMeta() async {
     final raw = await rootBundle.loadString('lib/assets/dados_perguntas.json');
     final map = jsonDecode(raw) as Map<String, dynamic>;
@@ -17,9 +15,9 @@ class HomeTela extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // CORREÇÃO: A cor primária agora é pinkAccent para combinar com a tela de jogo.
+    
     final primary = Colors.pinkAccent;
-    final accent = Colors.deepPurpleAccent; // A cor secundária pode ser a roxa agora.
+    final accent = Colors.deepPurpleAccent; 
     final avisoColor = Colors.orangeAccent;
 
     return Scaffold(
@@ -41,7 +39,7 @@ class HomeTela extends StatelessWidget {
               children: [
                 const SizedBox(height: 24),
 
-                // Card principal que agrupa nome e descrição
+                // card principal 
                 Card(
                   elevation: 16,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -51,7 +49,7 @@ class HomeTela extends StatelessWidget {
                     padding: const EdgeInsets.all(18),
                     child: Column(
                       children: [
-                        // Nome do jogo em retângulo interno (agora com a cor rosa)
+                      
                         Container(
                           width: double.infinity,
                           padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
@@ -73,7 +71,7 @@ class HomeTela extends StatelessWidget {
 
                         const SizedBox(height: 12),
 
-                        // Descrição em retângulo (agora com a cor roxa)
+                        
                         Container(
                           width: double.infinity,
                           padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
@@ -91,7 +89,7 @@ class HomeTela extends StatelessWidget {
 
                         const SizedBox(height: 12),
 
-                        // Aviso em retângulo principal (maior e destacado)
+                       
                         Container(
                           width: double.infinity,
                           padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 12),
@@ -119,7 +117,7 @@ class HomeTela extends StatelessWidget {
 
                 const Spacer(),
 
-                // Botão "Começar o Jogo" (agora com a cor rosa)
+                
                 Container(
                   width: double.infinity,
                   decoration: BoxDecoration(

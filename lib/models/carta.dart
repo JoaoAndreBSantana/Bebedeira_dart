@@ -1,7 +1,5 @@
 import 'dart:convert';
 
-/// Modelo Carta que representa uma entrada do JSON.
-/// Alguns campos são opcionais, por isso são nulos quando ausentes.
 class Carta {
   final String id;
   final String categoria;
@@ -33,7 +31,7 @@ class Carta {
     this.restricao,
   });
 
-  /// Construtor a partir de Map (JSON)
+  ///construtor a partir de map json
   factory Carta.fromJson(Map<String, dynamic> json) {
     return Carta(
       id: json['id'] as String,
@@ -52,7 +50,7 @@ class Carta {
     );
   }
 
-  /// Converte para Map (JSON)
+  ///converte para map json
   Map<String, dynamic> toJson() {
     return {
       'id': id,
